@@ -2,7 +2,10 @@ import axios from "axios";
 
 // Create axios instance with base URL for development
 const api = axios.create({
-  baseURL: process.env.NODE_ENV === 'development' ? 'http://localhost:4001' : '',
+  baseURL: process.env.REACT_APP_BACKEND_URL,
+  // process.env.NODE_ENV === "development"
+  //   ? "http://localhost:4001"
+  //   : process.env.REACT_APP_BACKEND_URL,
   timeout: 10000,
 });
 
